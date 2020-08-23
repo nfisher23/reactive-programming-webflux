@@ -6,4 +6,4 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Forward Request Headers to Downstream Services in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Forward-Request-Headers-to-Downstream-Services-in-Spring-Boot-Webflux)
 - [How to Mock Dependencies and Unit Test in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Mock-Dependencies-and-Unit-Test-in-Spring-Boot-Webflux)
 - [How to use Mock Server to End to End Test Any WebClient Calls in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Mock-Server-to-End-to-End-Test-Any-WebClient-Calls-in-Spring-Boot-Webflux)
-
+- [A Guide to Automatic Retries in Reactor](https://nickolasfisher.com/blog/A-Guide-to-Automatic-Retries-in-Reactor)
