@@ -1,10 +1,12 @@
 package com.nickolasfisher.testing.service;
 
 import com.nickolasfisher.testing.dto.DownstreamResponseDTO;
-import com.nickolasfisher.testing.dto.PersonDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
+import reactor.util.retry.Retry;
+
+import java.time.Duration;
 
 @Service
 public class MyService {
@@ -19,6 +21,10 @@ public class MyService {
         return this.webClient.get()
                 .uri("/legacy/persons")
                 .retrieve()
-                .bodyToFlux(DownstreamResponseDTO.class);
+                .bodyToFlux(DownstreamResponseDTO.class)
+                .retryWhen(
+                        Retry.backoff(3, Duration.ofMillis(250))
+                            .minBackoff(Duration.ofMillis(100))
+                );
     }
 }
