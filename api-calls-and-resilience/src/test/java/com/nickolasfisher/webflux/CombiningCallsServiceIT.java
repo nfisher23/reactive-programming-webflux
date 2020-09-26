@@ -74,4 +74,40 @@ public class CombiningCallsServiceIT {
         this.clientAndServer.verify(expectedSecondRequest, VerificationTimes.once());
     }
 
+    @Test
+    public void mergedCalls_callsBothEndpointsAndMergesResults() {
+        HttpRequest expectedFirstRequest = HttpRequest.request()
+                .withMethod(HttpMethod.GET.name())
+                .withPath("/first/endpoint/25");
+
+        this.clientAndServer.when(
+                expectedFirstRequest
+        ).respond(
+                HttpResponse.response()
+                        .withBody("{\"fieldFromFirstCall\": 250}")
+                        .withContentType(MediaType.APPLICATION_JSON)
+        );
+
+        HttpRequest expectedSecondRequest = HttpRequest.request()
+                .withMethod(HttpMethod.GET.name())
+                .withPath("/second/endpoint/45");
+
+        this.clientAndServer.when(
+                expectedSecondRequest
+        ).respond(
+                HttpResponse.response()
+                        .withBody("{\"fieldFromSecondCall\": \"something\"}")
+                        .withContentType(MediaType.APPLICATION_JSON)
+        );
+
+        StepVerifier.create(this.combiningCallsService.mergedCalls(25, 45))
+                .expectNextMatches(mergedCallsDTO -> 250 == mergedCallsDTO.getFieldOne()
+                        && "something".equals(mergedCallsDTO.getFieldTwo())
+                )
+                .verifyComplete();
+
+        this.clientAndServer.verify(expectedFirstRequest, VerificationTimes.once());
+        this.clientAndServer.verify(expectedSecondRequest, VerificationTimes.once());
+    }
+
 }
