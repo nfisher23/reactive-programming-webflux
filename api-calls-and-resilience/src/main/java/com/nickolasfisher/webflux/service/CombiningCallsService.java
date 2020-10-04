@@ -1,4 +1,4 @@
-package com.nickolasfisher.webflux;
+package com.nickolasfisher.webflux.service;
 
 import com.nickolasfisher.webflux.model.FirstCallDTO;
 import com.nickolasfisher.webflux.model.MergedCallsDTO;

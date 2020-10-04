@@ -1,7 +1,7 @@
-package com.nickolasfisher.webflux;
+package com.nickolasfisher.webflux.service;
 
+import com.nickolasfisher.webflux.service.CombiningCallsService;
 import io.swagger.models.HttpMethod;
-import org.apache.http.HttpHeaders;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,6 @@ import org.mockserver.junit.jupiter.MockServerExtension;
 import org.mockserver.model.HttpRequest;
 import org.mockserver.model.HttpResponse;
 import org.mockserver.model.MediaType;
-import org.mockserver.netty.MockServer;
 import org.mockserver.verify.VerificationTimes;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.test.StepVerifier;
