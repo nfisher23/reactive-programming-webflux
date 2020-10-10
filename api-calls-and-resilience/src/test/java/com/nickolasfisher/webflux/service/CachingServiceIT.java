@@ -12,16 +12,16 @@ public class CachingServiceIT {
 
     @Test
     public void englishLocaleWelcomeMessage_caches() {
-        RetryService mockFallbackService = Mockito.mock(RetryService.class);
+        RetryService mockRetryService = Mockito.mock(RetryService.class);
 
         AtomicInteger counter = new AtomicInteger();
-        Mockito.when(mockFallbackService.getWelcomeMessageAndHandleTimeout("en_US"))
+        Mockito.when(mockRetryService.getWelcomeMessageAndHandleTimeout("en_US"))
                 .thenReturn(Mono.defer(() ->
                             Mono.just(new WelcomeMessage("count " + counter.incrementAndGet()))
                         )
                 );
 
-        CachingService cachingService = new CachingService(mockFallbackService);
+        CachingService cachingService = new CachingService(mockRetryService);
 
         StepVerifier.create(cachingService.getEnglishLocaleWelcomeMessage())
                 .expectNextMatches(welcomeMessage -> "count 1".equals(welcomeMessage.getMessage()))
