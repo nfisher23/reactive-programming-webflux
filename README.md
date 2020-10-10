@@ -12,3 +12,4 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Make Sequential API Calls and Merge the Results In Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Make-Sequential-API-Calls-and-Merge-the-Results-In-Spring-Boot-Webflux)
 - [How to Make Parallel API calls in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Make-Parallel-API-calls-in-Spring-Boot-Webflux)
 - [How to Have a Fallback on Errors Calling Downstream Services in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Have-a-Fallback-on-Errors-Calling-Downstream-Services-in-Spring-Boot-Webflux)
+- [How to Automatically Retry on a Webclient Timeout in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Automatically-Retry-on-a-Webclient-Timeout-in-Spring-Boot-Webflux)
