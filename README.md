@@ -14,4 +14,4 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Have a Fallback on Errors Calling Downstream Services in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Have-a-Fallback-on-Errors-Calling-Downstream-Services-in-Spring-Boot-Webflux)
 - [How to Automatically Retry on a Webclient Timeout in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Automatically-Retry-on-a-Webclient-Timeout-in-Spring-Boot-Webflux)
 - [In-Memory Caching in Sprint Boot Webflux/Project Reactor](https://nickolasfisher.com/blog/InMemory-Caching-in-Sprint-Boot-WebfluxProject-Reactor)
-
+- [How to use Caffeine Caches Effectively in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Caffeine-Caches-Effectively-in-Spring-Boot-Webflux)
