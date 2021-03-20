@@ -15,3 +15,6 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Automatically Retry on a Webclient Timeout in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Automatically-Retry-on-a-Webclient-Timeout-in-Spring-Boot-Webflux)
 - [In-Memory Caching in Sprint Boot Webflux/Project Reactor](https://nickolasfisher.com/blog/InMemory-Caching-in-Sprint-Boot-WebfluxProject-Reactor)
 - [How to use Caffeine Caches Effectively in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Caffeine-Caches-Effectively-in-Spring-Boot-Webflux)
+- [Publishing to SNS in Java with the AWS SDK 2.0](https://nickolasfisher.com/blog/Publishing-to-SNS-in-Java-with-the-AWS-SDK-20)
+
+
