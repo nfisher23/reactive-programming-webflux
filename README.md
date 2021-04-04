@@ -19,6 +19,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 ### Redis
 
 - [How to use Embedded Redis to Test a Lettuce Client in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Embedded-Redis-to-Test-a-Lettuce-Client-in-Spring-Boot-Webflux)
+- [How to use a Redis Test Container with Lettuce/Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-a-Redis-Test-Container-with-LettuceSpring-Boot-Webflux)
 
 ### Caching
 
