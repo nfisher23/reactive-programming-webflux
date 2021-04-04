@@ -1,8 +1,11 @@
-package com.nickolasfisher.reactiveredis;
+package com.nickolasfisher.reactiveredis.service;
 
+import com.nickolasfisher.reactiveredis.Thing;
 import io.lettuce.core.api.reactive.RedisStringReactiveCommands;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+@Service
 public class RedisDataService {
 
     private final RedisStringReactiveCommands<String, String> redisStringReactiveCommands;

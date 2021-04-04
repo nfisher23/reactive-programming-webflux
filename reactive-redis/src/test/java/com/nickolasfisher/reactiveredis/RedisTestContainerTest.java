@@ -1,11 +1,9 @@
 package com.nickolasfisher.reactiveredis;
 
+import com.nickolasfisher.reactiveredis.service.RedisDataService;
 import io.lettuce.core.RedisClient;
-import org.junit.ClassRule;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
