@@ -21,6 +21,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to use Embedded Redis to Test a Lettuce Client in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Embedded-Redis-to-Test-a-Lettuce-Client-in-Spring-Boot-Webflux)
 - [How to use a Redis Test Container with Lettuce/Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-a-Redis-Test-Container-with-LettuceSpring-Boot-Webflux)
 - [How to Configure Lettuce to connect to a local Redis Instance with Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-connect-to-a-local-Redis-Instance-with-Webflux)
+- [How to Configure Lettuce to use Redis Read Replicas in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-use-Redis-Read-Replicas-in-Spring-Boot-Webflux)
 
 ### Caching
 

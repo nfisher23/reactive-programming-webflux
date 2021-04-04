@@ -1,4 +1,7 @@
 
-lettuce:
+redis-primary:
   host: 127.0.0.1
   port: 6379
+
+#optionally enable debug logs to sanity check this actually works
+#logging.level.io.lettuce.core: DEBUG

@@ -24,7 +24,7 @@ public class RedisTestContainerTest {
     @BeforeEach
     public void setupRedisClient() {
         RedisClient redisClient = RedisClient.create("redis://" + genericContainer.getHost() + ":" + genericContainer.getMappedPort(6379));
-        redisDataService = new RedisDataService(redisClient.connect().reactive());
+        redisDataService = new RedisDataService(redisClient.connect().reactive(), redisClient.connect().reactive());
     }
 
     @Test

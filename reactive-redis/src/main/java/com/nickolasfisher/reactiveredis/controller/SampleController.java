@@ -22,4 +22,11 @@ public class SampleController {
                 .flatMap(thing -> Mono.just(ResponseEntity.ok(thing)))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/primary-redis/{key}")
+    public Mono<ResponseEntity<Thing>> getPrimaryRedisValue(@PathVariable("key") Integer key) {
+        return redisDataService.getThingPrimary(key)
+                .flatMap(thing -> Mono.just(ResponseEntity.ok(thing)))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
 }

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  leader:
+    image: redis
+    ports:
+      - "6379:6379"
+      - 6379
+    networks:
+      - local
+  follower:
+    image: redis
+    ports:
+      - "6380:6379"
+      - 6379
+    networks:
+      - local
+    command: ["--replicaof", "leader", "6379"]
+
+networks:
+  local:
+    driver: bridge
