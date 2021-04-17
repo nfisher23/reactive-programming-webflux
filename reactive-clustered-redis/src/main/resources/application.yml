@@ -1,0 +1,7 @@
+
+# refer to https://nickolasfisher.com/blog/Bootstrap-a-Local-Sharded-Redis-Cluster-in-Five-Minutes
+# for how to bootstrap a redis cluster quickly
+redis-cluster:
+  host: 127.0.0.1
+  port: 30001
+
