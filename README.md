@@ -23,6 +23,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Configure Lettuce to connect to a local Redis Instance with Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-connect-to-a-local-Redis-Instance-with-Webflux)
 - [How to Configure Lettuce to use Redis Read Replicas in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-use-Redis-Read-Replicas-in-Spring-Boot-Webflux)
 - [Configuring Lettuce to work with Clustered Redis](https://nickolasfisher.com/blog/Configuring-Lettuce-to-work-with-Clustered-Redis)
+- [Breaking down Lettuce MSET Commands in Clustered Redis](https://nickolasfisher.com/blog/Breaking-down-Lettuce-MSET-Commands-in-Clustered-Redis)
 
 ### Caching
 
