@@ -21,9 +21,14 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to use Embedded Redis to Test a Lettuce Client in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-Embedded-Redis-to-Test-a-Lettuce-Client-in-Spring-Boot-Webflux)
 - [How to use a Redis Test Container with Lettuce/Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-a-Redis-Test-Container-with-LettuceSpring-Boot-Webflux)
 - [How to Configure Lettuce to connect to a local Redis Instance with Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-connect-to-a-local-Redis-Instance-with-Webflux)
+- [Working with String Types in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-String-Types-in-Redis-using-Lettuce-and-Webflux)
+
+#### More advanced redis topics
+
 - [How to Configure Lettuce to use Redis Read Replicas in Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-use-Redis-Read-Replicas-in-Spring-Boot-Webflux)
 - [Configuring Lettuce to work with Clustered Redis](https://nickolasfisher.com/blog/Configuring-Lettuce-to-work-with-Clustered-Redis)
 - [Breaking down Lettuce MSET Commands in Clustered Redis](https://nickolasfisher.com/blog/Breaking-down-Lettuce-MSET-Commands-in-Clustered-Redis)
+- [Using Hashtags in Clustered Redis with Lettuce](https://nickolasfisher.com/blog/Using-Hashtags-in-Clustered-Redis-with-Lettuce)
 
 ### Caching
 

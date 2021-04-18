@@ -27,6 +27,7 @@ public class PostConstructExecutor {
     public void doStuffOnClusteredRedis() {
         setHellos();
         showMsetAcrossCluster();
+        hashTagging();
     }
 
     private void setHellos() {
@@ -55,5 +56,19 @@ public class PostConstructExecutor {
         LOG.info("done with mset");
     }
 
+    private void hashTagging() {
+       for (int i = 0; i < 10; i++) {
+           String candidateKey = "not-hashtag." + i;
+           Long keySlotNumber = redisClusterReactiveCommands.clusterKeyslot(candidateKey).block();
+           LOG.info("key slot number for {} is {}", candidateKey, keySlotNumber);
+           redisClusterReactiveCommands.set(candidateKey, "value").block();
+       }
 
+        for (int i = 0; i < 10; i++) {
+            String candidateHashTaggedKey = "{some:hashtag}." + i;
+            Long keySlotNumber = redisClusterReactiveCommands.clusterKeyslot(candidateHashTaggedKey).block();
+            LOG.info("key slot number for {} is {}", candidateHashTaggedKey, keySlotNumber);
+            redisClusterReactiveCommands.set(candidateHashTaggedKey, "value").block();
+        }
+    }
 }
