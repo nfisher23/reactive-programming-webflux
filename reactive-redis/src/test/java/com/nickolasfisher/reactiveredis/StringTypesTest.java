@@ -2,40 +2,16 @@ package com.nickolasfisher.reactiveredis;
 
 
 import io.lettuce.core.KeyValue;
-import io.lettuce.core.RedisClient;
 import io.lettuce.core.SetArgs;
 import io.lettuce.core.api.reactive.RedisReactiveCommands;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.testcontainers.containers.GenericContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
 import java.util.Map;
 
-@Testcontainers
-public class StringTypesTest {
 
-    @Container
-    public static GenericContainer genericContainer = new GenericContainer(
-            DockerImageName.parse("redis:5.0.3-alpine")
-    ).withExposedPorts(6379);
-
-    private RedisClient redisClient;
-
-    @BeforeEach
-    public void setupRedisClient() {
-        redisClient = RedisClient.create("redis://" + genericContainer.getHost() + ":" + genericContainer.getMappedPort(6379));
-    }
-
-    @AfterEach
-    public void removeAllDataFromRedis() {
-        redisClient.connect().reactive().flushall().block();
-    }
+public class StringTypesTest extends BaseSetupAndTeardownRedis{
 
     @Test
     public void setAndGet() {

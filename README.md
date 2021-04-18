@@ -22,6 +22,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to use a Redis Test Container with Lettuce/Spring Boot Webflux](https://nickolasfisher.com/blog/How-to-use-a-Redis-Test-Container-with-LettuceSpring-Boot-Webflux)
 - [How to Configure Lettuce to connect to a local Redis Instance with Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-connect-to-a-local-Redis-Instance-with-Webflux)
 - [Working with String Types in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-String-Types-in-Redis-using-Lettuce-and-Webflux)
+- [Working with Lists in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-Lists-in-Redis-using-Lettuce-and-Webflux)
 
 #### More advanced redis topics
 
