@@ -23,6 +23,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [How to Configure Lettuce to connect to a local Redis Instance with Webflux](https://nickolasfisher.com/blog/How-to-Configure-Lettuce-to-connect-to-a-local-Redis-Instance-with-Webflux)
 - [Working with String Types in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-String-Types-in-Redis-using-Lettuce-and-Webflux)
 - [Working with Lists in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-Lists-in-Redis-using-Lettuce-and-Webflux)
+- [Working with Redis Hashes using Lettuce And Webflux](https://nickolasfisher.com/blog/Working-with-Redis-Hashes-using-Lettuce-And-Webflux)
 
 #### More advanced redis topics
 
