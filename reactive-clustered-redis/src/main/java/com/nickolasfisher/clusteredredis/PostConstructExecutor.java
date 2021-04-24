@@ -28,6 +28,37 @@ public class PostConstructExecutor {
         setHellos();
         showMsetAcrossCluster();
         hashTagging();
+        msetNxDifferentHashSlots();
+        msetNxSameHashSlots();
+    }
+
+    private void msetNxDifferentHashSlots() {
+        Mono<Boolean> successMono = redisClusterReactiveCommands.msetnx(
+            Map.of(
+                "key-1", "value-1",
+                "key-2", "value-2",
+                "key-3", "value-3",
+                "key-4", "value-4"
+            )
+        );
+
+        Boolean wasSuccessful = successMono.block();
+
+        LOG.info("msetnx success response: {}", wasSuccessful);
+    }
+
+    private void msetNxSameHashSlots() {
+        Mono<Boolean> successMono = redisClusterReactiveCommands.msetnx(
+                Map.of(
+                        "{same-hash-slot}.key-1", "value-1",
+                        "{same-hash-slot}.key-2", "value-2",
+                        "{same-hash-slot}.key-3", "value-3"
+                )
+        );
+
+        Boolean wasSuccessful = successMono.block();
+
+        LOG.info("msetnx success response: {}", wasSuccessful);
     }
 
     private void setHellos() {
