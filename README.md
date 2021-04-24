@@ -24,7 +24,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [Working with String Types in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-String-Types-in-Redis-using-Lettuce-and-Webflux)
 - [Working with Lists in Redis using Lettuce and Webflux](https://nickolasfisher.com/blog/Working-with-Lists-in-Redis-using-Lettuce-and-Webflux)
 - [Working with Redis Hashes using Lettuce And Webflux](https://nickolasfisher.com/blog/Working-with-Redis-Hashes-using-Lettuce-And-Webflux)
-- [A Guide Simple Set Operations in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-Simple-Set-Operations-in-Redis-with-Lettuce)
+- [A Guide to Simple Set Operations in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Simple-Set-Operations-in-Redis-with-Lettuce)
 - [A Guide to Operating on Multiple Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Multiple-Sets-in-Redis-with-Lettuce)
 - [A Guide to Operating on Sorted Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Sorted-Sets-in-Redis-with-Lettuce)
 
