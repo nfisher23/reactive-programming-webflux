@@ -27,6 +27,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [A Guide to Simple Set Operations in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Simple-Set-Operations-in-Redis-with-Lettuce)
 - [A Guide to Operating on Multiple Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Multiple-Sets-in-Redis-with-Lettuce)
 - [A Guide to Operating on Sorted Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Sorted-Sets-in-Redis-with-Lettuce)
+- [Expiring Individual Elements in a Redis Set](https://nickolasfisher.com/blog/Expiring-Individual-Elements-in-a-Redis-Set)
 
 #### More advanced redis topics
 
