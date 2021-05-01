@@ -10,6 +10,7 @@ import io.lettuce.core.codec.StringCodec;
 import io.lettuce.core.internal.LettuceFactories;
 import io.lettuce.core.masterreplica.MasterReplica;
 import io.lettuce.core.masterreplica.StatefulRedisMasterReplicaConnection;
+import io.lettuce.core.pubsub.api.reactive.RedisPubSubReactiveCommands;
 import io.lettuce.core.resource.ClientResources;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -21,6 +22,11 @@ public class RedisConfig {
     @Bean("redis-primary-commands")
     public RedisStringReactiveCommands<String, String> redisPrimaryReactiveCommands(RedisClient redisClient) {
         return redisClient.connect().reactive();
+    }
+
+    @Bean("redis-subscription-commands")
+    public RedisPubSubReactiveCommands<String, String> redisPubSubReactiveCommands(RedisClient redisClient) {
+        return redisClient.connectPubSub().reactive();
     }
 
     @Bean("redis-primary-client")

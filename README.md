@@ -28,6 +28,12 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [A Guide to Operating on Multiple Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Multiple-Sets-in-Redis-with-Lettuce)
 - [A Guide to Operating on Sorted Sets in Redis with Lettuce](https://nickolasfisher.com/blog/A-Guide-to-Operating-on-Sorted-Sets-in-Redis-with-Lettuce)
 - [Expiring Individual Elements in a Redis Set](https://nickolasfisher.com/blog/Expiring-Individual-Elements-in-a-Redis-Set)
+- [How to Publish and Subscribe to Redis Using Lettuce](https://nickolasfisher.com/blog/How-to-Publish-and-Subscribe-to-Redis-Using-Lettuce)
+- [How to Run a Lua Script against Redis using Lettuce](https://nickolasfisher.com/blog/How-to-Run-a-Lua-Script-against-Redis-using-Lettuce)
+- [Pre Loading a Lua Script into Redis With Lettuce](https://nickolasfisher.com/blog/Pre-Loading-a-Lua-Script-into-Redis-With-Lettuce)
+- [Subscribing to Redis Channels with Java, Spring Boot, and Lettuce](https://nickolasfisher.com/blog/Subscribing-to-Redis-Channels-with-Java-Spring-Boot-and-Lettuce)
+- [Redis Transactions, Reactive Lettuce: Buyer Beware](https://nickolasfisher.com/blog/Redis-Transactions-Reactive-Lettuce-Buyer-Beware)
+- [Optimistic Locking in Redis with Reactive Lettuce](https://nickolasfisher.com/blog/Optimistic-Locking-in-Redis-with-Reactive-Lettuce)
 
 #### More advanced redis topics
 

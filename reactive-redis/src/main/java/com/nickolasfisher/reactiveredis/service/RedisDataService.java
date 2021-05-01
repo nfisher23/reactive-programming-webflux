@@ -1,8 +1,7 @@
 package com.nickolasfisher.reactiveredis.service;
 
-import com.nickolasfisher.reactiveredis.Thing;
+import com.nickolasfisher.reactiveredis.model.Thing;
 import io.lettuce.core.api.reactive.RedisStringReactiveCommands;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

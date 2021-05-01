@@ -1,6 +1,6 @@
 package com.nickolasfisher.reactiveredis.controller;
 
-import com.nickolasfisher.reactiveredis.Thing;
+import com.nickolasfisher.reactiveredis.model.Thing;
 import com.nickolasfisher.reactiveredis.service.RedisDataService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

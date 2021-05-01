@@ -1,5 +1,6 @@
 package com.nickolasfisher.reactiveredis;
 
+import com.nickolasfisher.reactiveredis.model.Thing;
 import com.nickolasfisher.reactiveredis.service.RedisDataService;
 import io.lettuce.core.RedisClient;
 import org.junit.jupiter.api.BeforeEach;

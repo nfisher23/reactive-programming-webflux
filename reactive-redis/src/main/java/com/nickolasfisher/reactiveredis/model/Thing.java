@@ -1,4 +1,4 @@
-package com.nickolasfisher.reactiveredis;
+package com.nickolasfisher.reactiveredis.model;
 
 import lombok.Builder;
 import lombok.Getter;
