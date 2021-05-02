@@ -1,5 +1,6 @@
 package com.nickolasfisher.clusteredredis;
 
+import io.lettuce.core.ScriptOutputType;
 import io.lettuce.core.SetArgs;
 import io.lettuce.core.cluster.api.reactive.RedisClusterReactiveCommands;
 import org.springframework.stereotype.Service;
@@ -24,12 +25,24 @@ public class PostConstructExecutor {
     }
 
     @PostConstruct
-    public void doStuffOnClusteredRedis() {
+    public void doStuffOnClusteredRedis() throws InterruptedException {
+        scriptLoad();
         setHellos();
         showMsetAcrossCluster();
         hashTagging();
         msetNxDifferentHashSlots();
         msetNxSameHashSlots();
+    }
+
+    private void scriptLoad() throws InterruptedException {
+        LOG.info("starting script load");
+        String hashOfScript = redisClusterReactiveCommands.scriptLoad("return redis.call('set',KEYS[1],ARGV[1],'ex',ARGV[2])")
+                .block();
+
+        redisClusterReactiveCommands.evalsha(hashOfScript, ScriptOutputType.BOOLEAN, new String[]{"foo1"}, "bar1", "10").blockLast();
+
+        redisClusterReactiveCommands.evalsha(hashOfScript, ScriptOutputType.BOOLEAN, new String[] {"foo2"}, "bar2", "10").blockLast();
+        redisClusterReactiveCommands.evalsha(hashOfScript, ScriptOutputType.BOOLEAN, new String[] {"foo4"}, "bar4", "10").blockLast();
     }
 
     private void msetNxDifferentHashSlots() {
