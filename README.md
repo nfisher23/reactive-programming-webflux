@@ -43,6 +43,7 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [Using Hashtags in Clustered Redis with Lettuce and Webflux](https://nickolasfisher.com/blog/Using-Hashtags-in-Clustered-Redis-with-Lettuce-and-Webflux)
 - [Lettuce, MSETNX, and Clustered Redis](https://nickolasfisher.com/blog/Lettuce-MSETNX-and-Clustered-Redis)
 - [Pre Loading Lua Scripts into Clustered Redis with Lettuce](https://nickolasfisher.com/blog/Pre-Loading-Lua-Scripts-into-Clustered-Redis-with-Lettuce)
+- [Subscribing to Channels in Clustered Redis With Lettuce](https://nickolasfisher.com/blog/Subscribing-to-Channels-in-Clustered-Redis-With-Lettuce)
 
 ### Caching
 

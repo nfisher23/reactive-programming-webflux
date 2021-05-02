@@ -3,6 +3,8 @@ package com.nickolasfisher.clusteredredis;
 import io.lettuce.core.ScriptOutputType;
 import io.lettuce.core.SetArgs;
 import io.lettuce.core.cluster.api.reactive.RedisClusterReactiveCommands;
+import io.lettuce.core.cluster.pubsub.api.reactive.RedisClusterPubSubReactiveCommands;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import reactor.util.Logger;
@@ -10,7 +12,9 @@ import reactor.util.Loggers;
 
 import javax.annotation.PostConstruct;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -19,13 +23,17 @@ public class PostConstructExecutor {
     private static final Logger LOG = Loggers.getLogger(PostConstructExecutor.class);
 
     private final RedisClusterReactiveCommands<String, String> redisClusterReactiveCommands;
+    private final RedisClusterPubSubReactiveCommands<String, String> redisClusterPubSubReactiveCommands;
 
-    public PostConstructExecutor(RedisClusterReactiveCommands<String, String> redisClusterReactiveCommands) {
+    public PostConstructExecutor(@Qualifier("redis-cluster-commands") RedisClusterReactiveCommands<String, String> redisClusterReactiveCommands,
+                                 @Qualifier("redis-cluster-pub-sub") RedisClusterPubSubReactiveCommands<String, String> redisClusterPubSubReactiveCommands) {
         this.redisClusterReactiveCommands = redisClusterReactiveCommands;
+        this.redisClusterPubSubReactiveCommands = redisClusterPubSubReactiveCommands;
     }
 
     @PostConstruct
-    public void doStuffOnClusteredRedis() throws InterruptedException {
+    public void doStuffOnClusteredRedis() {
+        subscribeToChannel();
         scriptLoad();
         setHellos();
         showMsetAcrossCluster();
@@ -34,7 +42,20 @@ public class PostConstructExecutor {
         msetNxSameHashSlots();
     }
 
-    private void scriptLoad() throws InterruptedException {
+    private void subscribeToChannel() {
+        List<String> channels = new ArrayList<>();
+        for (int i = 1; i <= 100; i++) {
+            channels.add("channel-" + i);
+        }
+        redisClusterPubSubReactiveCommands.subscribe(channels.toArray(new String[0]))
+                .subscribe();
+
+        redisClusterPubSubReactiveCommands.observeChannels().doOnNext(channelAndMessage -> {
+            LOG.info("channel {}, message {}", channelAndMessage.getChannel(), channelAndMessage.getMessage());
+        }).subscribe();
+    }
+
+    private void scriptLoad() {
         LOG.info("starting script load");
         String hashOfScript = redisClusterReactiveCommands.scriptLoad("return redis.call('set',KEYS[1],ARGV[1],'ex',ARGV[2])")
                 .block();

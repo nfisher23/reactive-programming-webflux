@@ -2,6 +2,7 @@ package com.nickolasfisher.clusteredredis;
 
 import io.lettuce.core.cluster.RedisClusterClient;
 import io.lettuce.core.cluster.api.reactive.RedisClusterReactiveCommands;
+import io.lettuce.core.cluster.pubsub.api.reactive.RedisClusterPubSubReactiveCommands;
 import io.lettuce.core.resource.ClientResources;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +30,7 @@ public class LettuceConfig {
         this.port = port;
     }
 
-    @Bean
+    @Bean("redis-cluster-commands")
     public RedisClusterReactiveCommands<String, String> redisPrimaryReactiveCommands(RedisClusterClient redisClusterClient) {
         return redisClusterClient.connect().reactive();
     }
@@ -41,5 +42,10 @@ public class LettuceConfig {
                 ClientResources.builder().build(),
                 "redis://" + this.getHost() + ":" + this.getPort()
         );
+    }
+
+    @Bean("redis-cluster-pub-sub")
+    public RedisClusterPubSubReactiveCommands<String, String> redisClusterPubSub(RedisClusterClient redisClusterClient) {
+        return redisClusterClient.connectPubSub().reactive();
     }
 }
