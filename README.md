@@ -34,6 +34,8 @@ Some sample code solving specific problems with spring boot webflux. The tutoria
 - [Subscribing to Redis Channels with Java, Spring Boot, and Lettuce](https://nickolasfisher.com/blog/Subscribing-to-Redis-Channels-with-Java-Spring-Boot-and-Lettuce)
 - [Redis Transactions, Reactive Lettuce: Buyer Beware](https://nickolasfisher.com/blog/Redis-Transactions-Reactive-Lettuce-Buyer-Beware)
 - [Optimistic Locking in Redis with Reactive Lettuce](https://nickolasfisher.com/blog/Optimistic-Locking-in-Redis-with-Reactive-Lettuce)
+- [Using Redis as a Distributed Lock with Lettuce](https://nickolasfisher.com/blog/Using-Redis-as-a-Distributed-Lock-with-Lettuce)
+- [An Introduction to Redis Streams via Lettuce](https://nickolasfisher.com/blog/An-Introduction-to-Redis-Streams-via-Lettuce)
 
 #### More advanced redis topics
 
